@@ -1,0 +1,91 @@
+priority 20
+
+snippet def "#define ..." b
+#define $1
+endsnippet
+
+snippet ifndef "#ifndef ... #define ... #endif" b
+#ifndef $1
+#define ${1:symbol}
+$2
+#endif /* ifndef $1 */
+
+/* vi:set ft=c: */
+endsnippet
+
+snippet inc "#include ..." b
+#include <$1>
+endsnippet
+
+snippet main "main()" b
+int main(int argc, char* argv[static argc + 1]) {
+	$1
+	return EXIT_SUCCESS;
+}
+
+/* vi:set ft=c: */
+endsnippet
+
+snippet st "struct"
+typedef struct _$1 {
+	$2
+} $1;
+endsnippet
+
+snippet for "for loop" b
+for($1; $2; $3) {
+	$4
+}
+endsnippet
+
+snippet if "if" b
+if($1) {
+	$2
+}
+endsnippet
+
+snippet eli "else if"
+else if($1) {
+	$2
+}
+endsnippet
+
+snippet els "else"
+else {
+	$1
+}
+endsnippet
+
+snippet switch "switch"
+switch($1) {
+	case($2):
+		$3
+		${4:break;}$5
+	default:
+		$6
+}
+endsnippet
+
+snippet case "case"
+case($1):
+	$2
+	${3:break;}$4
+endsnippet
+
+snippet func "function" b
+${1:void} ${2:name}($3) {
+	$4
+}
+endsnippet
+
+snippet fund "function declaration" b
+${1:void} ${2:name}($3);
+endsnippet
+
+snippet ret "return"
+return $1;
+endsnippet
+
+snippet . "pointer operation" i
+->
+endsnippet
