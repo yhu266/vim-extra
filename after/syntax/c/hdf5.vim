@@ -33,7 +33,7 @@ else
 	command -nargs=+ HiLink hi def link <args>
 endif
 
-if exists('g:hdf5_syntax_c')
+if exists('g:syntax_extra_c_hdf5')
 	HiLink HDF5Constant Constant
 	HiLink HDF5Typedef Typedef
 	HiLink HDF5Function Function
