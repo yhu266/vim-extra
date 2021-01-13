@@ -28,7 +28,7 @@ syntax keyword HDF5Function H5Tarray_create
 syntax keyword HDF5Function H5Tclose
 
 if v:version < 508
-	command -nargs=+ HiLink hi link <argc>
+	command -nargs=+ HiLink hi link <args>
 else
 	command -nargs=+ HiLink hi def link <args>
 endif
