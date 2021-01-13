@@ -40,5 +40,3 @@ if exists('g:syntax_extra_c_hdf5')
 endif
 
 delcommand HiLink
-
-" vi:ft=vim
