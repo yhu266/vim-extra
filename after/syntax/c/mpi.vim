@@ -1,5 +1,6 @@
 syntax keyword MPIConstant MPI_COMM_WORLD
 syntax keyword MPIConstant MPI_DOUBLE
+syntax keyword MPIConstant MPI_INT
 
 syntax keyword MPIType MPI_Comm
 
@@ -8,9 +9,9 @@ syntax keyword MPIFunction MPI_Finalize
 syntax keyword MPIFunction MPI_Init
 
 if v:version < 508
-	command -nargs=+ HiLink hi link <args>
+	command -nargs=+ HiLink hi! link <args>
 else
-	command -nargs=+ HiLink hi def link <args>
+	command -nargs=+ HiLink hi! def link <args>
 endif
 
 if exists('g:syntax_extra_c_mpi')
