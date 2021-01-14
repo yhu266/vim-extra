@@ -1,4 +1,12 @@
+syntax keyword MPIConstant MPI_COMM_WORLD
 syntax keyword MPIConstant MPI_INTEGER
+syntax keyword MPIConstant MPI_REAL8
+
+syntax keyword MPIType MPI_Comm
+
+syntax keyword MPIFunction MPI_Abort
+syntax keyword MPIFunction MPI_Finalize
+syntax keyword MPIFunction MPI_Init
 
 if v:version < 508
 	command -nargs=+ HiLink hi! link <args>
