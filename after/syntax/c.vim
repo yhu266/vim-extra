@@ -7,9 +7,9 @@ syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
 
 syntax match cMemberAccess "\.\|->" nextgroup=cStructMember
 syntax match cStructMember "\<\h\w*\>\%((\|<\)\@!" contained
-syntax cluster cParenGroup add=cStructMember
-syntax cluster cPreProcGroup add=cStructMember
-syntax cluster cMultiGroup add=cStructMember
+" syntax cluster cParenGroup add=cStructMember
+" syntax cluster cPreProcGroup add=cStructMember
+" syntax cluster cMultiGroup add=cStructMember
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
@@ -26,15 +26,15 @@ else
 endif
 
 if exists('g:syntax_extra_c')
-	HiLink cStorageClass Statement
-	HiLink cStructure Statement
-	HiLink cTypedef Statement
-	HiLink cLabel Statement
 	HiLink cUserFunction Function
 	HiLink cStructMember Identifier
 	HiLink cOperator Operator
 	HiLink cDelimiter Delimiter
 	HiLink cBrace Delimiter
+	HiLink cStorageClass Statement
+	HiLink cStructure Statement
+	HiLink cTypedef Statement
+	HiLink cLabel Statement
 endif
 
 delcommand HiLink
