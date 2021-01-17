@@ -5,19 +5,19 @@
 
 syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
 
-syntax match cMemberAccess "\.\|->" nextgroup=cStructMember
+syntax match cStructMemberAccess "\.\|->" nextgroup=cStructMember
 syntax match cStructMember "\<\h\w*\>\%((\|<\)\@!" contained
 syntax cluster cParenGroup add=cStructMember
 syntax cluster cPreProcGroup add=cStructMember
 syntax cluster cMultiGroup add=cStructMember
 
-syntax match cOperator "[.!~*&%<>^|=,+-]"
-syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
-syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
+" syntax match cOperator "[.!~*&%<>^|=,+-]"
+" syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
+" syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
 
-syntax match cDelimiter "[();\\]"
+" syntax match cDelimiter "[();\\]"
 
-syntax match cBrace display "[{}]"
+" syntax match cBrace display "[{}]"
 
 if v:version < 508
 	command -nargs=+ HiLink hi! link <args>
@@ -28,9 +28,9 @@ endif
 if exists('g:syntax_extra_c')
 	HiLink cUserFunction Function
 	HiLink cStructMember Identifier
-	HiLink cOperator Operator
-	HiLink cDelimiter Delimiter
-	HiLink cBrace Delimiter
+	" HiLink cOperator Operator
+	" HiLink cDelimiter Delimiter
+	" HiLink cBrace Delimiter
 	HiLink cStorageClass Statement
 	HiLink cStructure Statement
 	HiLink cTypedef Statement
