@@ -3,7 +3,10 @@
 " reference: https://github.com/bfrg/vim-cpp-modern
 " reference: https://github.com/bfrg/vim-cuda-syntax
 
-syntax match cUserFunction "\w\+\s*(\@=" contains=cParen
+syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
+
+syntax match cMemberAccess "\.\|->" nextgroup=cStructMember
+syntax match cStructMember "\<\h\w*\>\%((\|<\)\@!" contained
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
@@ -21,6 +24,7 @@ endif
 
 if exists('g:syntax_extra_c')
 	HiLink cUserFunction Function
+	HiLink cStructMember Identifier
 	HiLink cOperator Operator
 	HiLink cDelimiter Delimiter
 	HiLink cBrace Delimiter
