@@ -2,15 +2,12 @@
 
 syntax match cUserFunction "\w\+\s*(\@=" contains=cParen
 
-syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
-syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
 syntax match cOperator "[.!~*&%<>^|=,+-]"
-syntax match cOperator "/[^/*=]"me=e-1
-syntax match cOperator "/$"
-syntax match cOperator "[][]"
+syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
+syntax match cOperator "\(<<\|>>\|[+-*/%&^|<>!=]\)="
 
 syntax match cDelimiter "[();\\]"
-syntax match cDelimiter display "[{}]"
+syntax match cBrace display "[{}]"
 
 if v:version < 508
 	command -nargs=+ HiLink hi! link <args>
@@ -22,6 +19,7 @@ if exists('g:syntax_extra_c')
 	HiLink cUserFunction Function
 	HiLink cOperator Operator
 	HiLink cDelimiter Delimiter
+	HiLink cBrace Delimiter
 endif
 
 delcommand HiLink
