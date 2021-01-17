@@ -3,6 +3,14 @@
 " reference: https://github.com/bfrg/vim-cpp-modern
 " reference: https://github.com/bfrg/vim-cuda-syntax
 
+syntax match cOperator "[.!~*&%<>^|=,+-]"
+syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
+syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
+
+" syntax match cDelimiter "[();\\]"
+
+" syntax match cBrace display "[{}]"
+
 syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
 
 syntax match cStructMemberAccess "\.\|->" nextgroup=cStructMember
@@ -11,14 +19,6 @@ syntax cluster cParenGroup add=cStructMember
 syntax cluster cPreProcGroup add=cStructMember
 syntax cluster cMultiGroup add=cStructMember
 
-" syntax match cOperator "[.!~*&%<>^|=,+-]"
-" syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
-" syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
-
-" syntax match cDelimiter "[();\\]"
-
-" syntax match cBrace display "[{}]"
-
 if v:version < 508
 	command -nargs=+ HiLink hi! link <args>
 else
@@ -26,11 +26,11 @@ else
 endif
 
 if exists('g:syntax_extra_c')
-	HiLink cUserFunction Function
-	HiLink cStructMember Identifier
-	" HiLink cOperator Operator
+	HiLink cOperator Operator
 	" HiLink cDelimiter Delimiter
 	" HiLink cBrace Delimiter
+	HiLink cUserFunction Function
+	HiLink cStructMember Identifier
 	HiLink cStorageClass Statement
 	HiLink cStructure Statement
 	HiLink cTypedef Statement
