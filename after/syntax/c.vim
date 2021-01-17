@@ -7,6 +7,9 @@ syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
 
 syntax match cMemberAccess "\.\|->" nextgroup=cStructMember
 syntax match cStructMember "\<\h\w*\>\%((\|<\)\@!" contained
+syntax cluster cParenGroup add=cStructMember
+syntax cluster cPreProcGroup add=cStructMember
+syntax cluster cMultiGroup add=cStructMember
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
