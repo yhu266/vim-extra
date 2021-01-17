@@ -4,7 +4,7 @@ syntax match cUserFunction "\w\+\s*(\@=" contains=cParen
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
-syntax match cOperator "\(<<\|>>\|[+-*/%&^|<>!=]\)="
+syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
 
 syntax match cDelimiter "[();\\]"
 syntax match cBrace display "[{}]"
