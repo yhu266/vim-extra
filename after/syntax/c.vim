@@ -26,6 +26,10 @@ else
 endif
 
 if exists('g:syntax_extra_c')
+	HiLink cStorageClass Statement
+	HiLink cStructure Statement
+	HiLink cTypedef Statement
+	HiLink cLabel Statement
 	HiLink cUserFunction Function
 	HiLink cStructMember Identifier
 	HiLink cOperator Operator
