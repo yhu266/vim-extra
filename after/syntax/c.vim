@@ -7,9 +7,9 @@ syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
 syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
 
-" syntax match cDelimiter "[();\\]"
+syntax match cDelimiter "[();\\]"
 
-" syntax match cBrace display "[{}]"
+syntax match cBrace display "[{}]"
 
 syntax match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen
 
@@ -27,9 +27,10 @@ endif
 
 if exists('g:syntax_extra_c')
 	HiLink cOperator Operator
-	" HiLink cDelimiter Delimiter
-	" HiLink cBrace Delimiter
+	HiLink cDelimiter Delimiter
+	HiLink cBrace Delimiter
 	HiLink cUserFunction Function
+	HiLink cStructMemberAccess Operator
 	HiLink cStructMember Identifier
 	HiLink cStorageClass Statement
 	HiLink cStructure Statement
