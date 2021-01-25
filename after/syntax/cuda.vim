@@ -9,7 +9,7 @@ else
 	command -nargs=+ HiLink hi! def link <args>
 endif
 
-if exists('g:syntax_extra_c')
+if exists('g:syntax_extra_cuda')
 endif
 
 delcommand HiLink
