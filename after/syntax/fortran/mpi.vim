@@ -73,6 +73,8 @@ syntax keyword MPIConstant MPI_MAXLOC
 syntax keyword MPIConstant MPI_REPLACE
 syntax keyword MPIConstant MPI_NO_OP
 
+" Permanent key values
+" WIP
 
 
 syntax keyword MPIConstant MPI_COMM_WORLD
