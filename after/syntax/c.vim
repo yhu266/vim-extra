@@ -1,10 +1,11 @@
 " reference: http://vimdoc.sourceforge.net/htmldoc/pattern.html
 " reference: https://github.com/octol/vim-cpp-enhanced-highlight
 " reference: https://github.com/bfrg/vim-cpp-modern
-" reference: https://github.com/bfrg/vim-cuda-syntax
+
+syntax keyword cTodo contained BUG NOTE MAYBE WIP
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
-syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
+syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->\|\[\|\]"
 syntax match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
 
 syntax match cDelimiter "[();\\]"
