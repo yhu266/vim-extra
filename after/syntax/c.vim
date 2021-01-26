@@ -2,7 +2,7 @@
 " reference: https://github.com/octol/vim-cpp-enhanced-highlight
 " reference: https://github.com/bfrg/vim-cpp-modern
 
-syntax keyword cTodo contained BUG NOTE MAYBE WIP
+syntax keyword cTodo contained BUG NOTE TEST MAYBE WIP
 
 syntax match cOperator "[.!~*&%<>^|=,+-]"
 syntax match cOperator "<<\|>>\|&&\|||\|++\|--\|->\|\[\|\]"
