@@ -9,12 +9,14 @@ snippet ifndef "#ifndef ... #define ... #endif" b
 #define ${1:symbol}
 $2
 #endif /* ifndef $1 */
-
-/* vi:set ft=c: */
 endsnippet
 
-snippet inc "#include ..." b
+snippet inc< "#include ..." b
 #include <$1>
+endsnippet
+
+snippet inc" "#include ..." b
+#include "$1"
 endsnippet
 
 snippet main "main()" b
@@ -22,8 +24,6 @@ int main(int argc, char* argv[static argc + 1]) {
 	$1
 	return EXIT_SUCCESS;
 }
-
-/* vi:set ft=c: */
 endsnippet
 
 snippet st "struct"
