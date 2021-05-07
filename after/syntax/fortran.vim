@@ -98,13 +98,8 @@ else
 	command -nargs=+ HiLink hi! def link <args>
 endif
 
-if exists('g:syntax_extra_fortran_mpi')
-	HiLink MPIConstant Constant
-	HiLink MPIType Typedef
-	HiLink MPIFunction Function
-endif
-
-if exists('g:syntax_extra_fortran_hdf5')
-endif
+HiLink MPIConstant Constant
+HiLink MPIType Typedef
+HiLink MPIFunction Function
 
 delcommand HiLink

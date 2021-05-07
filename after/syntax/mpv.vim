@@ -25,11 +25,9 @@ else
 	command -nargs=+ HiLink hi! def link <args>
 endif
 
-if exists('g:syntax_extra_mpv')
-	HiLink MPVConstant Constant
-	HiLink MPVIdentifier Identifier
-	HiLink MPVOperator Operator
-	HiLink MPVComment Comment
-endif
+HiLink MPVConstant Constant
+HiLink MPVIdentifier Identifier
+HiLink MPVOperator Operator
+HiLink MPVComment Comment
 
 delcommand HiLink

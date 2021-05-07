@@ -290,29 +290,23 @@ else
 	command -nargs=+ HiLink hi! def link <args>
 endif
 
-if exists('g:syntax_extra_c')
-	HiLink cOperator Operator
-	HiLink cDelimiter Delimiter
-	HiLink cBrace Delimiter
-	HiLink cUserFunction Function
-	HiLink cStructMemberAccess Operator
-	HiLink cStructMember Identifier
-	HiLink cStorageClass Statement
-	HiLink cStructure Statement
-	HiLink cTypedef Statement
-	HiLink cLabel Statement
-endif
+HiLink cOperator Operator
+HiLink cDelimiter Delimiter
+HiLink cBrace Delimiter
+HiLink cUserFunction Function
+HiLink cStructMemberAccess Operator
+HiLink cStructMember Identifier
+HiLink cStorageClass Statement
+HiLink cStructure Statement
+HiLink cTypedef Statement
+HiLink cLabel Statement
 
-if exists('g:syntax_extra_c_mpi')
-	HiLink MPIConstant Constant
-	HiLink MPIType Typedef
-	HiLink MPIFunction Function
-endif
+HiLink MPIConstant Constant
+HiLink MPIType Typedef
+HiLink MPIFunction Function
 
-if exists('g:syntax_extra_c_hdf5')
-	HiLink HDF5Constant Constant
-	HiLink HDF5Typedef Typedef
-	HiLink HDF5Function Function
-endif
+HiLink HDF5Constant Constant
+HiLink HDF5Typedef Typedef
+HiLink HDF5Function Function
 
 delcommand HiLink

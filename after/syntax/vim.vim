@@ -6,7 +6,4 @@ else
 	command -nargs=+ HiLink hi! def link <args>
 endif
 
-if exists('g:syntax_extra_vim')
-endif
-
 delcommand HiLink
