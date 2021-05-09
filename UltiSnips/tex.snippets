@@ -4,8 +4,6 @@ snippet doc "documentclass" b
 \\documentclass[$2]{$1}
 
 $3
-
-% vi:set ft=tex spell:
 endsnippet
 
 snippet use "usepackage" b
@@ -28,6 +26,36 @@ snippet eqn "equation" b
 \\begin{equation}\label{$1}
 	$2
 \\end{equation}
+endsnippet
+
+snippet def "definition" b
+\\begin{definition}[$1]\label{$2}
+	$3
+\\end{definition}
+endsnippet
+
+snippet thm "theorem" b
+\\begin{theorem}[$1]\label{$2}
+	$3
+\\end{theorem}
+endsnippet
+
+snippet cor "corollary" b
+\\begin{corollary}[$1]\label{$2}
+	$3
+\\end{corollary}
+endsnippet
+
+snippet lem "lemma" b
+\\begin{lemma}[$1]\label{$2}
+	$3
+\\end{lemma}
+endsnippet
+
+snippet rmk "remark" b
+\\begin{remark}[$1]\label{$2}
+	$3
+\\end{remark}
 endsnippet
 
 snippet lr(
