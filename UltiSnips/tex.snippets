@@ -17,49 +17,56 @@ snippet beg "begin ... end"
 endsnippet
 
 snippet math "math" b
-\\begin{math}\label{$1}
+\\begin{math}
+	\label{$1}
 	$2
 \\end{math}
 endsnippet
 
 snippet eqn "equation" b
-\\begin{equation}\label{$1}
+\\begin{equation}
+	\label{$1}
 	$2
 \\end{equation}
 endsnippet
 
 snippet def "definition" b
-\\begin{definition}[$1]\label{$2}
-	$3
+\\begin{definition}
+	\label{$1}
+	$2
 \\end{definition}
 endsnippet
 
 snippet thm "theorem" b
-\\begin{theorem}[$1]\label{$2}
-	$3
+\\begin{theorem}
+	\label{$1}
+	$2
 \\end{theorem}
 endsnippet
 
 snippet cor "corollary" b
-\\begin{corollary}[$1]\label{$2}
-	$3
+\\begin{corollary}
+	\label{$1}
+	$2
 \\end{corollary}
 endsnippet
 
 snippet lem "lemma" b
-\\begin{lemma}[$1]\label{$2}
-	$3
+\\begin{lemma}
+	\label{$1}
+	$2
 \\end{lemma}
 endsnippet
 
 snippet rmk "remark" b
-\\begin{remark}[$1]\label{$2}
-	$3
+\\begin{remark}
+	\label{$1}
+	$2
 \\end{remark}
 endsnippet
 
 snippet lr(
-\\left( $1 }\\right)
+\\left( $1 \\right)
 endsnippet
 
 snippet lr<
@@ -86,8 +93,9 @@ endsnippet
 
 snippet fig
 \\begin{figure}[H]
-	\\includegraphics{$1}
-	\\caption{$2}
+	\label{$1}
+	\\includegraphics{$2}
+	\\caption{$3}
 \\end{figure}
 endsnippet
 
