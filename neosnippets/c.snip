@@ -1,0 +1,19 @@
+snippet inc<
+options head
+abbr #include <...>
+	#include <${1}.h>
+
+snippet inc"
+options head
+abbr #include "..."
+	#include "${1}.h"
+
+snippet main
+options head
+abbr int main(void) {...}
+	int main(void) {
+		${1}
+		return 0;
+	}
+
+# vi: set noexpandtab:
